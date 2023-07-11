@@ -5,7 +5,6 @@ pipeline{
   stages{
     stage ('game'){
       steps {
-        sh "cd /mnt/game-of-life/game0flife-web/target "
         sh "cp -r gameoflife.war /mnt/servers/apache-tomcat-9.0.76/webapps"
         sh "chmod -R 777 /mnt/servers/apache-tomcat-9.0.76/webapps/gameoflife.war"
       }
