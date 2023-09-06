@@ -20,7 +20,7 @@ steps {
         sh "sudo cp -r /mnt/jenkins-slave/workspace/game-slave1/gameoflife-web/target/gameoflife.war /mnt/servers/apache-tomcat-9.0.80/webapps/"
         sh "sudo chmod -R 777 /mnt/servers/apache-tomcat-9.0.80/webapps/gameoflife.war"
         sh "sudo cd /mnt/servers/apache-tomcat-9.0.80/bin/"
-        sh "sudo ./startup.sh "
+        //sh "./startup.sh "
       }
     }
   }
