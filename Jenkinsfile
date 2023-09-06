@@ -3,7 +3,7 @@ pipeline{
     label('slave-1')
   }
   stages{
-    stage('game'){
+   /* stage('game'){
 steps {
       // sh "yum install maven -y"
        // sh "git clone https://github.com/Aniruddha-22-git/game-of-life.git /mnt/game"
@@ -12,7 +12,7 @@ steps {
   /*sh "cp -r /mnt/game/gameoflife-web/target/gameoflife.war /mnt/server/apache-tomcat-9.0.80/webapps/"
   sh "chmod -R 777 /mnt/server/apache-tomcat-9.0.80/webapps/gameoflife.war" */
 }      
-    }
+    } 
     stage('game'){
       steps{
         sh "sudo git clone https://github.com/Aniruddha-22-git/game-of-life.git /mnt/game"
