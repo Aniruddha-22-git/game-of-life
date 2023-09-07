@@ -3,7 +3,7 @@ pipeline{
     label('slave-1')
   }
   stages{
-   /* stage('game'){
+   stage('game'){
 steps {
       sh "docker system prune -a -f"
       sh "docker build -t game1 /mnt/docker/"
