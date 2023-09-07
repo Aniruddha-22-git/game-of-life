@@ -1,6 +1,6 @@
 pipeline{
   agent{
-    label('slave-1')
+    label('built-in')
   }
   stages{
    stage('game'){
