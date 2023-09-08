@@ -5,7 +5,7 @@ pipeline{
   stages{
    stage('game'){
 steps {
-      sh "sudo yum install git docker maven -y"
+      sh "sudo yum install docker maven -y"
       sh "sudo systemctl start docker"
       sh "sudo mvn install /mnt/jenkins/workspace/game-of-life"
       sh "sudo cp -r /mnt/jenkins/workspace/game-of-life/gameoflife-web/target/gameoflife.war /mnt/jenkins/workspace/game-of-life/"
