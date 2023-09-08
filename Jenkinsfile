@@ -1,12 +1,14 @@
 pipeline{
   agent{
-    label('dev')
+    label('slave-2')
   }
   stages{
    stage('game'){
 steps {
-      sh "sudo yum install docker -y"
+      sh "sudo yum install git docker maven -y"
       sh "sudo systemctl start docker"
+      sh "sudo mvn install /mnt/jenkins/workspace/game-of-life"
+      sh "sudo cp -r /mnt/jenkins/workspace/game-of-life/gameoflife-web/target/gameoflife.war /mnt/jenkins/workspace/game-of-life/"
       sh "sudo docker system prune -a -f"
       sh "sudo docker build -t game1 /mnt/game-of-life/"
       sh "sudo docker run -itdp 8088:8080 --name game3 game1 "
