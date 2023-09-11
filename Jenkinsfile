@@ -20,8 +20,8 @@ steps {
     }*/
   stage('game1'){
     steps {
-           sh "git clone https://github.com/Aniruddha-22-git/game-of-life.git /mnt/dot/"
-           sh "mvn install /mnt/dot/"
+           sh "git clone https://github.com/Aniruddha-22-git/game-of-life.git /mnt/dot/game/"
+           sh "mvn install /mnt/dot/game/"
     }
   }
   }
