@@ -1,7 +1,10 @@
 pipeline{
   agent{
-    label('built-in')
-    customworkspace '/mnt/dot'  
+   label{
+				label "built-in"
+				customWorkspace "/mnt/dot"
+		
+		} 
   }
   stages{
    /*stage('game'){
