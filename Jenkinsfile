@@ -22,7 +22,7 @@ steps {
     steps {
            //sh "mvn install "
 	    sh "cp -r /mnt/dot/gameoflife-web/target/gameoflife.war /mnt/dot"
-	    sh " docker build -t game ."
+	    sh " docker build -t game /mnt/dot/"
 	    sh " docker run -itdp 8088:8080 --name game game"
     }
   }
