@@ -20,7 +20,7 @@ steps {
     }*/
   stage('game1'){
     steps {
-         sh "touch hii"
+        // sh "touch hii"
 	    sh "mvn install"
 	    
   }
