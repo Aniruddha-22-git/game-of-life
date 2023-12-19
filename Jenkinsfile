@@ -2,6 +2,7 @@ pipeline{
   agent{
    label{
 				label "built-in"
+	                         customworkspace "/mnt"
 		
 		} 
   }
@@ -19,7 +20,7 @@ steps {
     }*/
   stage('game1'){
     steps {
-          sh "mkdir hello /mnt/"
+          sh "touch hello"
     }
   }
   }
