@@ -19,7 +19,7 @@ steps {
     }*/
   stage('game1'){
     steps {
-          sh "mkdir hello /mnt"
+          sh "mkdir hello /mnt/"
     }
   }
   }
