@@ -2,7 +2,7 @@ pipeline{
   agent{
    label{
 				label "built-in"
-	                         
+	                  	customWorkspace "/mnt"
 		
 		} 
   }
@@ -20,13 +20,7 @@ steps {
     }*/
   stage('game1'){
     steps {
-         // sh "touch hello"
-	    sh "mvn install "
-	    sh "cp -r /root/.jenkins/workspace/game-of-life/gameoflife.war /mnt/servers/apache-tomcat-9.0.84/webapps"
-	    sh "chmod -R 777 /mnt/servers/apache-tomcat-9.0.84/webapps/gameoflife.war"
-	    sh "cd /mnt/servers/apache-tomcat-9.0.84/bin"
-	    sh "./startup.sh"
-    }
+         sh "touch hii"
   }
   }
 }
