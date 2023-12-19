@@ -2,7 +2,6 @@ pipeline{
   agent{
    label{
 				label "built-in"
-				customWorkspace "/mnt/dot"
 		
 		} 
   }
@@ -20,10 +19,7 @@ steps {
     }*/
   stage('game1'){
     steps {
-           //sh "mvn install "
-	    sh "cp -r /mnt/dot/gameoflife-web/target/gameoflife.war /mnt/dot"
-	    sh " docker build -t game1 ."
-	    sh " docker run -itdp 8088:8080 --name game game1 "
+          sh "mkdir hello /mnt"
     }
   }
   }
