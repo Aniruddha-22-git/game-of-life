@@ -2,7 +2,7 @@ pipeline{
   agent{
    label{
 				label "built-in"
-	                  	customWorkspace "/mnt"
+	                  	customWorkspace "/mnt/game-of-life"
 		
 		} 
   }
